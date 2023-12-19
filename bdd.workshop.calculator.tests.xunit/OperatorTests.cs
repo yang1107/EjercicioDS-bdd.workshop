@@ -70,6 +70,14 @@ namespace bdd.workshop.calculator.tests.xunit
             Assert.True(Double.IsNaN(Operator.SquareRoot(a)));
         }
 
+        [Theory(DisplayName = "SquareRoot Theory")]
+        [Trait("TestType", "Theory")]
+        [InlineData(1, 1)]
+        public void SquareRootTheory(int a, double result)
+        {
+            Assert.True(Operator.SquareRoot(a) == result);
+        }
+
 
         //[Fact]
         //[Trait("TestType","NRT")]
