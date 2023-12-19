@@ -1,0 +1,19 @@
+@model bdd.workshop.calculator.web.Models.SquareRoot
+
+@{
+
+    ViewBag.Title = "SquareRoot!";
+}
+
+<h2>Do SquareRoot</h2>
+@using (Html.BeginForm("SquareRoot","SquareRoot"))
+            {
+<fieldset>
+    <legend>SquareRoot</legend>
+
+    <div class="editor-field">
+        The Number: @Html.TextBoxFor(model => model.A.TheNumber);
+    </div>
+</fieldset>
+<input type="submit" value="Do The SquareRoot" />
+            }
