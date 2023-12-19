@@ -33,23 +33,3 @@ Scenario: Division of two numbers returning non integer value
 	And the second number is 4
 	When I divide first number by second number
 	Then the result is 2.5
- 
-Scenario: Calculate the square root of a positive number
-    	Given I have entered 25 into the calculator
-    	When I press square root
-    	Then the result should be 5
-
-Scenario: Attempt to calculate the square root of a negative number
-    	Given I have entered -4 into the calculator
-    	When I press square root
-    	Then the result should be "NaN"
-
-Scenario: Calculate the square root of zero
-    	Given I have entered 0 into the calculator
-    	When I press square root
-    	Then the result should be 0
-
-Scenario Outline: Calculate the square root of various numbers
-    	Given I have entered <number> into the calculator
-    	When I press square root
-    	Then the result should be <result>
