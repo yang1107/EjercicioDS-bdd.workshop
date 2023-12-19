@@ -61,6 +61,17 @@ namespace bdd.workshop.calculator.tests.xunit
             double result = 2;
             Assert.True(Operator.SquareRoot(a) == result);
         }
+
+        [Fact]
+        [Trait("TestType", "UT")]
+        public void SquareRootNegative()
+        {
+            int a = -4;
+            double result = double.NaN;
+            Assert.True(Operator.SquareRoot(a) == result);
+        }
+
+
         //[Fact]
         //[Trait("TestType","NRT")]
         //public void DividingNonIntegerResult()
