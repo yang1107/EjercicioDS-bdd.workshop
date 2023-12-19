@@ -39,6 +39,7 @@ namespace bdd.workshop.calculator
             if (a >= 0)
             {
                 result = Math.Sqrt(a);
+                Console.Write(result);
             }
 
             return result;
