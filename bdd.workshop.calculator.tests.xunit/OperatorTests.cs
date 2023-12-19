@@ -73,7 +73,8 @@ namespace bdd.workshop.calculator.tests.xunit
         [Theory(DisplayName = "SquareRoot Theory")]
         [Trait("TestType", "Theory")]
         [InlineData(1, 1)]
-        [InlineData(0,0)]  
+        [InlineData(0,0)]
+        [InlineData(4,2)]
         public void SquareRootTheory(int a, double result)
         {
             Assert.True(Operator.SquareRoot(a) == result);
