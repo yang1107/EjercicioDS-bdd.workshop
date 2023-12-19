@@ -68,14 +68,6 @@ namespace bdd.workshop.calculator.tests.tdd.steps
             var secondNumber = _scenarioContext.Get<int>("SecondNumber");
             _scenarioContext.Add("Result", Operator.Divide(firstNumber, secondNumber));
         }
-    //Parte de Raiz cuadrada
-        [When(@"I take the SquareRoot of the first number")]
-        public void WhenITakeSquareRoot()
-        {
-            var firstNumber = _scenarioContext.Get<int>("FirstNumber");
-            _scenarioContext.Add("Result", Operator.SquareRoot(firstNumber));
-        }
-
 
         [Then(@"the result is (.*)")]
         public void ThenTheResultIs(double result)

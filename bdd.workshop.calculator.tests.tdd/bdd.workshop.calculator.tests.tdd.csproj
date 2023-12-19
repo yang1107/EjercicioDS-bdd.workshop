@@ -7,7 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <CustomAdditionalCompileInputs Remove="SquareRoot.feature.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <SpecFlowObsoleteCodeBehindFiles Remove="Calculator.feature.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckBuild Remove="SquareRoot.feature.cs" />
   </ItemGroup>
 
   <ItemGroup>
