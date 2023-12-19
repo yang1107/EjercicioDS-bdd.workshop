@@ -33,3 +33,4 @@ Scenario: Division of two numbers returning non integer value
 	And the second number is 4
 	When I divide first number by second number
 	Then the result is 2.5
+

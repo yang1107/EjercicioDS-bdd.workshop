@@ -32,6 +32,21 @@ namespace bdd.workshop.calculator
 
         public static int Substract(int a, int b) => a - b;
 
+        public static double SquareRoot(int a)
+        {
+            var result = double.NaN;
+
+            if (a >= 0)
+            {
+                result = Math.Sqrt(a);
+                Console.Write(result);
+            }
+
+            return result;
+        }
+            
+           
+
         public static PrimeNumberInfo IsPrimeNumber(int number)
         {
             var result = number == 0 ? PrimeNumberInfo.Unknown : number == 1 ? PrimeNumberInfo.No : PrimeNumberInfo.Yes ;            

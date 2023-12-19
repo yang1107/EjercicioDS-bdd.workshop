@@ -51,6 +51,42 @@ namespace bdd.workshop.calculator.tests.xunit
             double result = 16;
             Assert.True(Operator.Substract(a, b) == result);
         }
+
+        //Unit Test para la operacion Raiz Cuadrada
+        [Fact]
+        [Trait("TestType", "UT")]
+        public void BasicSquareRoot()
+        {
+            int a = 4;;
+            double result = 2;
+            Assert.True(Operator.SquareRoot(a) == result);
+        }
+
+        [Fact]
+        [Trait("TestType", "UT")]
+        public void SquareRootNegative()
+        {
+            int a = -4;
+            Assert.True(Double.IsNaN(Operator.SquareRoot(a)));
+        }
+
+        [Theory(DisplayName = "SquareRoot Theory")]
+        [Trait("TestType", "Theory")]
+        [InlineData(1, 1)]
+        [InlineData(0,0)]
+        [InlineData(4,2)]
+        [InlineData(25, 5)]
+        [InlineData(36, 6)]
+        [InlineData(49, 7)]
+        [InlineData(64, 8)]
+        [InlineData(81, 9)]
+        [InlineData(100, 10)]
+        public void SquareRootTheory(int a, double result)
+        {
+            Assert.True(Operator.SquareRoot(a) == result);
+        }
+
+
         //[Fact]
         //[Trait("TestType","NRT")]
         //public void DividingNonIntegerResult()
