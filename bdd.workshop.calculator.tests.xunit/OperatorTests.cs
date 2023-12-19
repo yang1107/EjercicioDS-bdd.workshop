@@ -67,8 +67,7 @@ namespace bdd.workshop.calculator.tests.xunit
         public void SquareRootNegative()
         {
             int a = -4;
-            double result = double.NaN;
-            Assert.True(Operator.SquareRoot(a) == result);
+            Assert.True(Double.IsNaN(Operator.SquareRoot(a)));
         }
 
 
