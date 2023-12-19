@@ -75,6 +75,12 @@ namespace bdd.workshop.calculator.tests.xunit
         [InlineData(1, 1)]
         [InlineData(0,0)]
         [InlineData(4,2)]
+        [InlineData(25, 5)]
+        [InlineData(36, 6)]
+        [InlineData(49, 7)]
+        [InlineData(64, 8)]
+        [InlineData(81, 9)]
+        [InlineData(100, 10)]
         public void SquareRootTheory(int a, double result)
         {
             Assert.True(Operator.SquareRoot(a) == result);
